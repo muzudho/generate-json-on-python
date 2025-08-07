@@ -1,3 +1,14 @@
+def stringify_sea_pattern(tilemap_name):
+    return f"""\
+    "{tilemap_name}_0" : {{
+        "srcTop": 0,
+        "srcLeft": 0,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+"""
+
+
 text = """\
 {
     "land_wasteland": {
@@ -20,12 +31,11 @@ text = """\
     },
 
 
-    "out_0" : {
-        "srcTop": 0,
-        "srcLeft": 0,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
+"""
+
+text += stringify_sea_pattern(tilemap_name="out")
+
+text += """\
     "out_16" : {
         "srcTop": 0,
         "srcLeft": 32,
