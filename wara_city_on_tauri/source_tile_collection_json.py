@@ -1,5 +1,7 @@
 def stringify_sea_pattern(tilemap_name):
     return f"""\
+
+
     "{tilemap_name}_0" : {{
         "srcTop": 0,
         "srcLeft": 0,
@@ -285,6 +287,109 @@ def stringify_sea_pattern(tilemap_name):
 """
 
 
+def stringify_sea_border_pattern(tilemap_name):
+    return f"""\
+
+
+    "{tilemap_name}_A0" : {{
+        "srcTop": 0,
+        "srcLeft": 0,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A16" : {{
+        "srcTop": 0,
+        "srcLeft": 32,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A32" : {{
+        "srcTop": 0,
+        "srcLeft": 64,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A48" : {{
+        "srcTop": 0,
+        "srcLeft": 96,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A64" : {{
+        "srcTop": 32,
+        "srcLeft": 0,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A80" : {{
+        "srcTop": 32,
+        "srcLeft": 32,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A96" : {{
+        "srcTop": 32,
+        "srcLeft": 64,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A112" : {{
+        "srcTop": 32,
+        "srcLeft": 96,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A128" : {{
+        "srcTop": 64,
+        "srcLeft": 0,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A144" : {{
+        "srcTop": 64,
+        "srcLeft": 32,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A160" : {{
+        "srcTop": 64,
+        "srcLeft": 64,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A176" : {{
+        "srcTop": 64,
+        "srcLeft": 96,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A192" : {{
+        "srcTop": 96,
+        "srcLeft": 0,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A208" : {{
+        "srcTop": 96,
+        "srcLeft": 32,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A224" : {{
+        "srcTop": 96,
+        "srcLeft": 64,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+    "{tilemap_name}_A240" : {{
+        "srcTop": 96,
+        "srcLeft": 96,
+        "srcWidth": 32,
+        "srcHeight": 32
+    }},
+"""
+
+
 text = """\
 {
     "land_wasteland": {
@@ -305,111 +410,13 @@ text = """\
         "srcWidth": 32,
         "srcHeight": 32
     },
-
-
 """
 
 text += stringify_sea_pattern(tilemap_name="out")
+text += stringify_sea_border_pattern(tilemap_name="outBorder")
+
 
 text += """\
-
-
-    "outBorder_A0" : {
-        "srcTop": 0,
-        "srcLeft": 0,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A16" : {
-        "srcTop": 0,
-        "srcLeft": 32,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A32" : {
-        "srcTop": 0,
-        "srcLeft": 64,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A48" : {
-        "srcTop": 0,
-        "srcLeft": 96,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A64" : {
-        "srcTop": 32,
-        "srcLeft": 0,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A80" : {
-        "srcTop": 32,
-        "srcLeft": 32,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A96" : {
-        "srcTop": 32,
-        "srcLeft": 64,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A112" : {
-        "srcTop": 32,
-        "srcLeft": 96,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A128" : {
-        "srcTop": 64,
-        "srcLeft": 0,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A144" : {
-        "srcTop": 64,
-        "srcLeft": 32,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A160" : {
-        "srcTop": 64,
-        "srcLeft": 64,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A176" : {
-        "srcTop": 64,
-        "srcLeft": 96,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A192" : {
-        "srcTop": 96,
-        "srcLeft": 0,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A208" : {
-        "srcTop": 96,
-        "srcLeft": 32,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A224" : {
-        "srcTop": 96,
-        "srcLeft": 64,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
-    "outBorder_A240" : {
-        "srcTop": 96,
-        "srcLeft": 96,
-        "srcWidth": 32,
-        "srcHeight": 32
-    },
 
 
 
