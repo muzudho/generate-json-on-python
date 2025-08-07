@@ -392,6 +392,9 @@ def stringify_sea_border_pattern(tilemap_name):
 
 text = """\
 {
+    "#comment" : "このJSONファイルは直接編集せず、次のURLにあるPythonスクリプトを編集して、スクリプトを実行して生成してください。 https://github.com/muzudho/generate-json-on-python/tree/main/wara_city_on_tauri",
+
+
     "land_wasteland": {
         "srcTop": 0,
         "srcLeft": 0,
